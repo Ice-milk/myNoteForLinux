@@ -622,13 +622,13 @@ echo $x
 #### 环境变量配置文件启动流程
 
 ```
-graph LR
-A[/etc/profile]-->B["~/.bash_profile"]
+graph TB
+A[/etc/profile]-->|2|B["~/.bash_profile"]
 B-->C["~/.bashrc"]
 C-->D[/etc/bashrc]
 D-->E[命令提示符]
-A-->F[/etc/profile.d/*.sh]
-D-->F
+A-->|1|F[/etc/profile.d/*.sh]
+D-->|nologinshell|F
 F-->G[/etc/profile.d/lang.sh]
 G-->H[/etc/sysconfig/i18n]
 ```
