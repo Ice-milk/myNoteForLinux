@@ -1,8 +1,9 @@
-# linux常用命令 上
+#  三 linux常用命令 上
 
 ## 1 文件处理命令
 
-### 命令格式与目录处理命令ls
+### 1.1 命令格式与目录处理命令ls
+
 - **命令格式**：`命令 [-选项] [参数]`
     - 例：`ls -la /etc`
 - **说明**：
@@ -36,10 +37,11 @@ drwxr-xr-x| 3 |root| root| 4.0K| Jul 23 18:39 |download
 文件类型|rw-|r--|r--
 -二进制文件，d目录，l软链接文件|u所有者|g所属组|o其他
 -|r读|w写|x执行
- 
-### 目录处理命令
+
+### 1.2 目录处理命令
 
 #### 创建目录mkdir
+
 ```
 原意：make dirctories
 路径：/bin/mkdir
@@ -52,6 +54,7 @@ drwxr-xr-x| 3 |root| root| 4.0K| Jul 23 18:39 |download
 ```
 
 #### 打开目录cd
+
 ```
 原意：change directory
 路径：shell内置
@@ -116,7 +119,7 @@ drwxr-xr-x| 3 |root| root| 4.0K| Jul 23 18:39 |download
     删除文件
 ```
 
-### 文件处理命令
+### 1.3 文件处理命令
 
 #### 创建空文件touch
 ```
@@ -175,7 +178,8 @@ tail -n指定行数
      -f动态显示（监控日志）
 ```
 
-### 链接命令ln
+### 1.4 链接命令ln
+
 - 原意：link
 - 路径：/bin/ln
 - 权限：所有用户
@@ -201,7 +205,8 @@ ln /etc/issue /tmp/issue.hard
     - 不能跨分区
     - 不能针对目录使用
 
-### 统计文件行数wc -l
+### 1.5 统计文件行数wc -l
+
 ```
 Usage: wc [OPTION]... [FILE]...
 
@@ -225,7 +230,8 @@ delimited by white space.
 
 ## 2 权限管理命令
 
-### 更改文件权限chmod
+### 2.1 更改文件权限chmod
+
 - 原意：change the permissions mode of a file
 - 路径：/bin/chmod
 - 权限：文件所有者，root
@@ -250,7 +256,7 @@ password 用户名 设置密码
 ```
 普通文件最佳权限分配：目录755文件775
 
-### 其他权限管理命令
+### 2.2 其他权限管理命令
 
 #### 更改所有者chown
 - 原意：change file ownership
@@ -262,6 +268,7 @@ password 用户名 设置密码
 ```
 
 #### 更改所属组chgrp
+
 - 原意：change file group ownership
 - 路径：/bin/chgrp
 - 权限：root
@@ -302,7 +309,8 @@ password 用户名 设置密码
 - 一旦使用选择的范围尽量小
 - 搜索条件尽量精准
 
-### 文件搜索命令find
+### 3.1 文件搜索命令find
+
 - 路径：/bin/find
 - 权限：所有用户
 ```
@@ -345,7 +353,7 @@ password 用户名 设置密码
     - `-exeac/-ok 命令 {} \;`对搜索结果执行操作
     - `-ok`会询问，常用于删除
 
-### 其他搜索命令
+### 3.2 其他搜索命令
 
 #### 快速查找locate
 - 路径：/usr/bin/locate
@@ -383,5 +391,3 @@ password 用户名 设置密码
     去脚本注释#
     grep -v ^# 文件
 ```
-
-## 

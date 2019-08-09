@@ -120,6 +120,7 @@ root|     pts/0|    101.206.167.109|  11:07 |   1.00s | 0.03s | 0.00s| w
 - .tar.gz
     - 压缩：`tar -zcvf 压缩包名.tar.gz 目录`
     - 解压：`tar -zxvf 压缩包名.tar.gz`
+    - 查看：`tar -ztvf 压缩包名.tar.gz`
 - .bz2高压缩文件
     - 压缩：`bzip2 文件名`
     - 解压：`bunzip2 压缩包.bz2`

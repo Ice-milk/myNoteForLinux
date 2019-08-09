@@ -621,7 +621,7 @@ echo $x
 
 #### 环境变量配置文件启动流程
 
-```
+```mermaid
 graph TB
 A[/etc/profile]-->|2|B["~/.bash_profile"]
 B-->C["~/.bashrc"]
